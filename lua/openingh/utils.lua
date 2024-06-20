@@ -122,6 +122,11 @@ function M.get_current_commit_or_branch()
   return M.encode_uri_component(M.get_default_branch())
 end
 
+-- Returns the current default branch
+function M.get_current_default_branch()
+  return M.encode_uri_component(M.get_default_branch())
+end
+
 -- get the active buf relative file path form the .git
 function M.get_current_relative_file_path()
   -- we only want the active buffer name

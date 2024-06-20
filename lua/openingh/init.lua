@@ -29,6 +29,8 @@ local function get_current_branch_or_commit_with_priority(priority)
     return utils.get_current_branch_or_commit()
   elseif priority == M.priority.COMMIT then
     return utils.get_current_commit_or_branch()
+  elseif priority == M.priority.DEFAULT then
+    return utils.get_current_default_branch()
   else
     return utils.get_current_branch_or_commit()
   end
